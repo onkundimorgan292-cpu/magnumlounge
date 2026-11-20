@@ -79,4 +79,798 @@
       }
       70% {
         transform: scale(1.1);
-        box-shadow: 0 
+        box-shadow: 0 0 0 11px rgba(245, 197, 66, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(245, 197, 66, 0);
+      }
+    }
+
+    .live-dot-gold {
+      width: 11px;
+      height: 11px;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 35% 35%, #FFF4B8, #F5C542 65%, #B8860B 100%);
+      animation: pulseGold 1.8s infinite;
+      flex-shrink: 0;
+    }
+
+    .gold-shimmer-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.68), transparent);
+    }
+  </style>
+</head>
+<body class="font-sans text-[#F8F6F0] antialiased selection:bg-gold selection:text-obsidian">
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-40 border-b border-gold/25 bg-obsidian/88 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
+      <a href="#top" class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/55 bg-gold/10 font-display text-lg font-bold text-goldLight shadow-goldGlow">
+          M
+        </div>
+        <div>
+          <p id="navVenueName" class="font-display text-sm font-bold tracking-[0.16em] text-goldLight sm:text-lg">MAGNUM BAR &amp; LOUNGE</p>
+          <p id="navTagline" class="text-[10px] uppercase tracking-[0.2em] text-stone-400 sm:text-[11px]">Naivas Hyper Mall &bull; Kisii</p>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-6 text-sm font-medium text-stone-300 lg:flex">
+        <a href="#countdown" class="transition hover:text-goldLight">Dec 25th Event</a>
+        <a href="#packages" class="transition hover:text-goldLight">Table Tiers</a>
+        <a href="#location" class="transition hover:text-goldLight">Live Location</a>
+        <a href="#gallery" class="transition hover:text-goldLight">Gallery</a>
+      </nav>
+
+      <a
+        href="#packages"
+        class="rounded-full bg-gradient-to-r from-goldDark via-gold to-goldLight px-4 py-2 text-xs font-extrabold uppercase tracking-[0.14em] text-obsidian shadow-goldGlow transition hover:brightness-110 sm:px-5 sm:py-2.5"
+      >
+        Book Table
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero & Live Countdown -->
+  <section id="top" class="relative overflow-hidden px-4 pt-10 pb-16 sm:px-6 sm:pt-14 sm:pb-20">
+    <div class="mx-auto max-w-5xl text-center">
+      <!-- Active Golden Live Pill -->
+      <div class="mb-6 inline-flex items-center gap-2.5 rounded-full border border-gold/50 bg-surface/95 px-4 py-2 shadow-goldGlow">
+        <span class="live-dot-gold" aria-hidden="true"></span>
+        <span id="liveStatusText" class="text-xs font-bold uppercase tracking-[0.2em] text-liveGold">
+          LIVE BOOKINGS OPEN &bull; DECEMBER 25, 2026
+        </span>
+      </div>
+
+      <p class="mb-2 text-xs font-semibold uppercase tracking-[0.28em] text-gold/90 sm:text-sm">
+        Naivas Hyper Mall &bull; Kisii-Migori Road
+      </p>
+      <h1 id="heroTitle" class="font-display text-3xl font-extrabold tracking-[0.07em] gold-text-gradient sm:text-6xl md:text-7xl">
+        MAGNUM BAR &amp; LOUNGE
+      </h1>
+      <p id="heroSubtitle" class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-stone-300 sm:text-base">
+        Get ready for the big <span class="font-semibold text-goldLight">December 25, 2026</span> celebration at <span class="font-semibold text-white">Naivas Hyper Mall - Kisii, along Kisii-Migori Road</span>. Lock in your VVIP, VIP, or Regular table and pull up with live directions.
+      </p>
+
+      <!-- Countdown Timer -->
+      <div id="countdown" class="mx-auto mt-9 max-w-3xl rounded-2xl gold-border-glow bg-surface/90 p-5 backdrop-blur-md sm:p-7">
+        <div class="mb-4 flex flex-col items-center justify-between gap-2 sm:flex-row">
+          <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-goldLight">
+            <span class="live-dot-gold" style="width:8px;height:8px;"></span>
+            Countdown to December 25, 2026
+          </span>
+          <span id="eventDateBadge" class="rounded-full border border-gold/30 bg-obsidian/85 px-3 py-1 text-[11px] font-medium text-stone-300">
+            Kisii Festive Night &bull; Doors 8:00 PM
+          </span>
+        </div>
+
+        <div class="grid grid-cols-4 gap-2.5 sm:gap-4">
+          <div class="rounded-xl border border-gold/25 bg-obsidian/95 p-3 sm:p-4">
+            <div id="cd-days" class="font-display text-2xl font-bold text-goldLight sm:text-4xl">00</div>
+            <div class="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-400 sm:text-xs">Days</div>
+          </div>
+          <div class="rounded-xl border border-gold/25 bg-obsidian/95 p-3 sm:p-4">
+            <div id="cd-hours" class="font-display text-2xl font-bold text-goldLight sm:text-4xl">00</div>
+            <div class="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-400 sm:text-xs">Hours</div>
+          </div>
+          <div class="rounded-xl border border-gold/25 bg-obsidian/95 p-3 sm:p-4">
+            <div id="cd-minutes" class="font-display text-2xl font-bold text-goldLight sm:text-4xl">00</div>
+            <div class="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-400 sm:text-xs">Minutes</div>
+          </div>
+          <div class="rounded-xl border border-gold/25 bg-obsidian/95 p-3 sm:p-4">
+            <div id="cd-seconds" class="font-display text-2xl font-bold text-liveGold sm:text-4xl">00</div>
+            <div class="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-400 sm:text-xs">Seconds</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Actions -->
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="#packages"
+          class="rounded-full bg-gradient-to-r from-goldDark via-gold to-goldLight px-7 py-3.5 text-xs font-extrabold uppercase tracking-[0.18em] text-obsidian shadow-goldGlow transition hover:scale-[1.02] sm:text-sm"
+        >
+          Book Dec 25th Table
+        </a>
+        <a
+          href="#location"
+          class="rounded-full border border-gold/55 bg-surface/95 px-7 py-3.5 text-xs font-bold uppercase tracking-[0.18em] text-goldLight transition hover:border-goldLight hover:bg-gold/10 sm:text-sm"
+        >
+          Live Location &amp; Directions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-shimmer-line mx-auto max-w-6xl"></div>
+
+  <!-- Table Packages Section -->
+  <section id="packages" class="px-4 py-16 sm:px-6 sm:py-20">
+    <div class="mx-auto max-w-6xl">
+      <div class="mb-12 text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.28em] text-gold">December 25th Reservations</p>
+        <h2 class="mt-2 font-display text-3xl font-bold tracking-[0.06em] text-white sm:text-5xl">
+          VIP &amp; Table <span class="gold-text-gradient">Packages</span>
+        </h2>
+        <p class="mx-auto mt-3 max-w-xl text-sm text-stone-400">
+          Reserve your table ahead of the December 25th rush and confirm directly via WhatsApp (<span id="pkgPhoneSpan" class="font-semibold text-goldLight">0116162159</span>).
+        </p>
+      </div>
+
+      <div id="packagesGrid" class="grid gap-7 md:grid-cols-3">
+        <!-- Populated from MAGNUM_CONFIG -->
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-shimmer-line mx-auto max-w-6xl"></div>
+
+  <!-- Live Location & Directions Section -->
+  <section id="location" class="px-4 py-16 sm:px-6 sm:py-20">
+    <div class="mx-auto max-w-6xl">
+      <div class="mb-10 text-center">
+        <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-surface px-4 py-1.5">
+          <span class="live-dot-gold" style="width:8px;height:8px;"></span>
+          <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-liveGold">Live Venue Pin &bull; Kisii</span>
+        </div>
+        <h2 class="font-display text-3xl font-bold tracking-[0.06em] text-white sm:text-4xl">
+          Find Magnum <span class="gold-text-gradient">Live</span>
+        </h2>
+        <p id="locationSubtitle" class="mx-auto mt-2 max-w-2xl text-sm text-stone-300 sm:text-base">
+          Located at <span class="font-semibold text-goldLight">Naivas Hyper Mall - Kisii, along Kisii-Migori Road</span>. Tap below for live turn-by-turn directions on Google Maps.
+        </p>
+      </div>
+
+      <div class="grid gap-7 lg:grid-cols-12">
+        <div class="overflow-hidden rounded-2xl gold-border-glow bg-surface lg:col-span-7">
+          <div class="relative aspect-[16/11] w-full bg-obsidian">
+            <iframe
+              id="locationMapFrame"
+              title="Magnum Bar and Lounge Live Map - Naivas Hyper Mall Kisii"
+              src="https://maps.google.com/maps?q=Naivas+Hyper+Mall+Kisii+Kisii-Migori+Road&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              class="h-full w-full border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-between rounded-2xl gold-border-glow bg-surface/95 p-6 sm:p-7 lg:col-span-5">
+          <div>
+            <span class="inline-flex items-center gap-2 rounded-full border border-gold/35 bg-obsidian/90 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-goldLight">
+              <span class="live-dot-gold" style="width:8px;height:8px;"></span>
+              Active Pin
+            </span>
+
+            <h3 class="mt-4 font-display text-2xl font-bold text-white">Naivas Hyper Mall &bull; Kisii</h3>
+            <p id="locationAddressText" class="mt-2 text-sm leading-relaxed text-stone-300">
+              We are located at Naivas Hyper Mall - Kisii, along Kisii-Migori Road.
+            </p>
+
+            <div class="gold-shimmer-line my-5"></div>
+
+            <ul class="space-y-2.5 text-sm text-stone-300">
+              <li class="flex items-center gap-2.5">
+                <span class="h-2 w-2 rounded-full bg-goldLight"></span>
+                <span>Corridor: Kisii-Migori Road, Kisii Town</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-2 w-2 rounded-full bg-goldLight"></span>
+                <span>Landmark: Naivas Hyper Mall Complex</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-2 w-2 rounded-full bg-liveGold"></span>
+                <span>Event Night: December 25, 2026</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-7 flex flex-col gap-3">
+            <a
+              id="liveDirectionsLink"
+              href="https://www.google.com/maps/dir/?api=1&destination=Naivas+Hyper+Mall+Kisii+Kisii-Migori+Road"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full rounded-xl bg-gradient-to-r from-goldDark via-gold to-goldLight py-3.5 text-center text-xs font-extrabold uppercase tracking-[0.18em] text-obsidian shadow-goldGlow transition hover:brightness-110"
+            >
+              Open Live Google Maps Directions
+            </a>
+
+            <div class="grid grid-cols-2 gap-3">
+              <button
+                type="button"
+                onclick="copyVenueAddress()"
+                class="rounded-xl border border-gold/45 bg-obsidian/85 py-2.5 text-xs font-bold uppercase tracking-wider text-goldLight transition hover:bg-gold/10"
+              >
+                <span id="copyAddressLabel">Copy Address</span>
+              </button>
+              <button
+                type="button"
+                onclick="shareLiveLocation()"
+                class="rounded-xl border border-gold/45 bg-obsidian/85 py-2.5 text-xs font-bold uppercase tracking-wider text-goldLight transition hover:bg-gold/10"
+              >
+                Share Pin
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-shimmer-line mx-auto max-w-6xl"></div>
+
+  <!-- Photo Gallery Section -->
+  <section id="gallery" class="px-4 py-16 sm:px-6 sm:py-20">
+    <div class="mx-auto max-w-6xl">
+      <div class="mb-8 flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.28em] text-gold">Magnum Moments</p>
+          <h2 class="mt-1 font-display text-3xl font-bold tracking-[0.06em] text-white sm:text-4xl">
+            Lounge <span class="gold-text-gradient">Gallery</span>
+          </h2>
+        </div>
+
+        <div id="galleryFilters" class="flex flex-wrap gap-2">
+          <!-- Populated from MAGNUM_CONFIG -->
+        </div>
+      </div>
+
+      <div id="galleryGrid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Populated from MAGNUM_CONFIG -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gold/25 bg-charcoal/95 px-4 py-10 sm:px-6">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left">
+      <div>
+        <div class="inline-flex items-center gap-2">
+          <span class="live-dot-gold" aria-hidden="true"></span>
+          <span class="font-display text-base font-bold tracking-[0.16em] text-goldLight sm:text-lg">MAGNUM BAR &amp; LOUNGE</span>
+        </div>
+        <p class="mt-1.5 text-xs text-stone-400 sm:text-sm">
+          Naivas Hyper Mall - Kisii, along Kisii-Migori Road &bull; December 25, 2026 &bull; WhatsApp: <span id="footerPhone" class="font-semibold text-goldLight">0116162159</span>
+        </p>
+      </div>
+
+      <button
+        type="button"
+        onclick="openBookingModal('VVIP Table', 50000)"
+        class="rounded-full bg-gradient-to-r from-goldDark via-gold to-goldLight px-6 py-2.5 text-xs font-extrabold uppercase tracking-[0.16em] text-obsidian shadow-goldGlow transition hover:brightness-110"
+      >
+        Book For Dec 25th
+      </button>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-2xl gold-border-glow bg-surface p-6 shadow-goldCard">
+      <button
+        type="button"
+        onclick="closeBookingModal()"
+        aria-label="Close booking modal"
+        class="absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full border border-gold/30 text-stone-300 transition hover:border-gold hover:text-goldLight"
+      >
+        &times;
+      </button>
+
+      <div class="mb-4 flex items-center gap-2">
+        <span class="live-dot-gold" aria-hidden="true"></span>
+        <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-liveGold">Instant WhatsApp Booking</span>
+      </div>
+
+      <h3 class="font-display text-2xl font-bold text-goldLight">Magnum &bull; Dec 25th</h3>
+      <p class="mt-1 text-xs text-stone-400">
+        Naivas Hyper Mall - Kisii, along Kisii-Migori Road &bull; Booking line: <span id="modalPhoneText" class="font-semibold text-stone-200">0116162159</span>
+      </p>
+
+      <form id="bookingForm" class="mt-5 space-y-4">
+        <div>
+          <label class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-stone-300">Package Tier</label>
+          <select id="packageSelect" class="w-full rounded-xl border border-gold/35 bg-obsidian px-3.5 py-2.5 text-sm text-white focus:border-goldLight focus:outline-none">
+            <option value="VVIP Table|50000">VVIP Table — KES 50,000</option>
+            <option value="VIP Table|45000">VIP Table — KES 45,000</option>
+            <option value="Regular Table|5000">Regular Table — KES 5,000</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label for="guestName" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-stone-300">Your Name</label>
+            <input
+              id="guestName"
+              type="text"
+              required
+              placeholder="Your name"
+              class="w-full rounded-xl border border-gold/35 bg-obsidian px-3.5 py-2.5 text-sm text-white placeholder-stone-500 focus:border-goldLight focus:outline-none"
+            />
+          </div>
+          <div>
+            <label for="guestCount" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-stone-300">Guests</label>
+            <input
+              id="guestCount"
+              type="number"
+              min="1"
+              max="30"
+              value="4"
+              required
+              class="w-full rounded-xl border border-gold/35 bg-obsidian px-3.5 py-2.5 text-sm text-white focus:border-goldLight focus:outline-none"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="guestNotes" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-stone-300">Notes (Optional)</label>
+          <input
+            id="guestNotes"
+            type="text"
+            placeholder="Bottle preference or arrival time"
+            class="w-full rounded-xl border border-gold/35 bg-obsidian px-3.5 py-2.5 text-sm text-white placeholder-stone-500 focus:border-goldLight focus:outline-none"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full rounded-xl bg-gradient-to-r from-goldDark via-gold to-goldLight py-3 text-xs font-extrabold uppercase tracking-[0.18em] text-obsidian shadow-goldGlow transition hover:brightness-110"
+        >
+          Confirm on WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4 backdrop-blur-md">
+    <div class="relative w-full max-w-3xl overflow-hidden rounded-2xl gold-border-glow bg-surface">
+      <button
+        type="button"
+        onclick="closeLightbox()"
+        aria-label="Close image preview"
+        class="absolute top-3 right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-gold/40 bg-obsidian/85 text-lg text-goldLight hover:bg-gold hover:text-obsidian"
+      >
+        &times;
+      </button>
+      <img id="lightboxImg" src="" alt="" class="max-h-[75vh] w-full object-cover bg-obsidian" />
+      <div class="flex flex-col items-start justify-between gap-3 p-4 sm:flex-row sm:items-center sm:px-6">
+        <div>
+          <span id="lightboxCategory" class="text-[11px] font-bold uppercase tracking-[0.2em] text-gold"></span>
+          <h4 id="lightboxTitle" class="font-display text-lg font-bold text-white"></h4>
+        </div>
+        <button
+          type="button"
+          onclick="closeLightbox(); openBookingModal('VIP Table', 45000);"
+          class="rounded-full bg-gradient-to-r from-goldDark via-gold to-goldLight px-5 py-2 text-xs font-bold uppercase tracking-[0.15em] text-obsidian"
+        >
+          Book For Dec 25th
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Same JSON data embedded directly in HTML -->
+  <script id="magnum-json-data" type="application/json">
+  {
+    "venue": {
+      "name": "Magnum Bar & Lounge",
+      "tagline": "Naivas Hyper Mall \u2022 Kisii",
+      "whatsappNumber": "254116162159",
+      "displayPhone": "0116162159",
+      "currency": "KES",
+      "location": {
+        "text": "Naivas Hyper Mall - Kisii, along Kisii-Migori Road",
+        "mapQuery": "Naivas Hyper Mall Kisii Kisii-Migori Road",
+        "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Naivas+Hyper+Mall+Kisii+Kisii-Migori+Road"
+      }
+    },
+    "featuredEvent": {
+      "title": "December 25th Mega Night",
+      "dateISO": "2026-12-25T20:00:00+03:00",
+      "displayDate": "December 25, 2026",
+      "status": "LIVE BOOKINGS OPEN",
+      "countdownEnabled": true
+    },
+    "packages": [
+      {
+        "id": "vvip",
+        "name": "VVIP Table",
+        "price": 50000,
+        "formattedPrice": "KES 50,000",
+        "badge": "Most Exclusive",
+        "perks": [
+          "Prime VVIP Booth Reservation (Up to 8 Guests)",
+          "2 Premium Bottles (Hennessy / Martell VSOP / Black Label)",
+          "Dedicated Host, Express Entry & Chasers"
+        ]
+      },
+      {
+        "id": "vip",
+        "name": "VIP Table",
+        "price": 45000,
+        "formattedPrice": "KES 45,000",
+        "badge": "VIP Experience",
+        "perks": [
+          "Reserved VIP Lounge Table (Up to 6 Guests)",
+          "2 Premium Bottles or Spirit Selection",
+          "Priority Service & Mixers Included"
+        ]
+      },
+      {
+        "id": "regular",
+        "name": "Regular Table",
+        "price": 5000,
+        "formattedPrice": "KES 5,000",
+        "badge": "Standard Table",
+        "perks": [
+          "Reserved Lounge Table & Entry Access",
+          "Drink / Bottle Credit Included",
+          "Full Access to Live DJ & Dancefloor"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "file": "images/1795131555002.jpg",
+        "title": "Martell VSOP Bottle Service",
+        "category": "Bottle Service"
+      },
+      {
+        "file": "images/1795131580314.jpg",
+        "title": "Hennessy VIP Night",
+        "category": "Bottle Service"
+      },
+      {
+        "file": "images/1795131669289.jpg",
+        "title": "Live DJ on the Decks",
+        "category": "Entertainment"
+      },
+      {
+        "file": "images/1795131683931.jpg",
+        "title": "Magnum Lounge Crew & Bottles",
+        "category": "Guests"
+      },
+      {
+        "file": "images/1795131723949.jpg",
+        "title": "Toast & Lounge Vibes",
+        "category": "Atmosphere"
+      },
+      {
+        "file": "images/1795131746276.jpg",
+        "title": "Chilled Hennessy Ice Bucket",
+        "category": "VIP Service"
+      },
+      {
+        "file": "images/1795131824030.jpg",
+        "title": "Johnnie Walker & Hennessy Lineup",
+        "category": "Bottle Service"
+      },
+      {
+        "file": "images/1795131832787.jpg",
+        "title": "Magnum Nightlife Spotlight",
+        "category": "Guests"
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    const EMBEDDED_JSON_TEXT = document.getElementById("magnum-json-data").textContent;
+    let activeConfig = JSON.parse(EMBEDDED_JSON_TEXT);
+    let activeCategory = "All";
+
+    function formatKES(amount) {
+      return "KES " + Number(amount || 0).toLocaleString("en-KE");
+    }
+
+    function makeFallbackSvg(label) {
+      const safe = String(label || "Magnum Bar & Lounge").replace(/[<>&"]/g, "");
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+        <rect width="800" height="600" fill="#101016"/>
+        <rect x="24" y="24" width="752" height="552" rx="18" fill="none" stroke="#D4AF37" stroke-opacity="0.48" stroke-width="2"/>
+        <text x="400" y="285" fill="#F4D26E" font-family="Georgia, serif" font-size="32" font-weight="bold" text-anchor="middle">MAGNUM BAR &amp; LOUNGE</text>
+        <text x="400" y="332" fill="#A8A29E" font-family="sans-serif" font-size="18" text-anchor="middle">${safe}</text>
+      </svg>`;
+      return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+    }
+
+    function renderPackages() {
+      const grid = document.getElementById("packagesGrid");
+      const pkgs = activeConfig.packages || [];
+
+      grid.innerHTML = pkgs.map((pkg, idx) => {
+        const isFeatured = idx === 0 || pkg.id === "vvip";
+        const priceText = pkg.formattedPrice || formatKES(pkg.price);
+        const perksHtml = (pkg.perks || []).map(perk => `
+          <li class="flex items-start gap-2.5 text-sm text-stone-300">
+            <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-goldLight"></span>
+            <span>${perk}</span>
+          </li>
+        `).join("");
+
+        return `
+          <article class="relative flex flex-col justify-between rounded-2xl gold-border-glow ${isFeatured ? "bg-gradient-to-b from-[#1D180C] via-surface to-obsidian ring-1 ring-gold/45" : "bg-surface/95"} p-6 sm:p-7 transition">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-goldLight">
+                  ${pkg.badge || "Dec 25th"}
+                </span>
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-liveGold">
+                  <span class="live-dot-gold" style="width:8px;height:8px;"></span>
+                  Live
+                </span>
+              </div>
+
+              <h3 class="mt-5 font-display text-2xl font-bold text-white">${pkg.name}</h3>
+              <div class="mt-2">
+                <span class="font-display text-3xl font-extrabold gold-text-gradient sm:text-4xl">${priceText}</span>
+              </div>
+
+              <div class="gold-shimmer-line my-5"></div>
+
+              <ul class="space-y-3">
+                ${perksHtml}
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              onclick="openBookingModal('${String(pkg.name).replace(/'/g, "\\'")}', ${Number(pkg.price || 0)})"
+              class="mt-8 w-full rounded-xl ${isFeatured ? "bg-gradient-to-r from-goldDark via-gold to-goldLight text-obsidian font-extrabold shadow-goldGlow" : "border border-gold/50 bg-obsidian/85 text-goldLight font-bold hover:bg-gold/15"} py-3.5 text-xs uppercase tracking-[0.18em] transition hover:brightness-110"
+            >
+              Book ${pkg.name}
+            </button>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function renderGallery() {
+      const items = activeConfig.gallery || [];
+      const categories = ["All", ...new Set(items.map(i => i.category).filter(Boolean))];
+      const filterContainer = document.getElementById("galleryFilters");
+      const grid = document.getElementById("galleryGrid");
+
+      filterContainer.innerHTML = categories.map(cat => {
+        const active = cat === activeCategory;
+        return `
+          <button
+            type="button"
+            onclick="setGalleryCategory('${String(cat).replace(/'/g, "\\'")}')"
+            class="rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${active ? "bg-gold text-obsidian" : "border border-gold/30 bg-surface text-stone-300 hover:border-gold/70 hover:text-goldLight"}"
+          >
+            ${cat}
+          </button>
+        `;
+      }).join("");
+
+      const filtered = activeCategory === "All"
+        ? items
+        : items.filter(i => i.category === activeCategory);
+
+      grid.innerHTML = filtered.map((item) => {
+        const fallback = makeFallbackSvg(item.title || item.file);
+        return `
+          <figure
+            onclick="openLightbox('${String(item.file).replace(/'/g, "\\'")}', '${String(item.title || "Magnum Bar & Lounge").replace(/'/g, "\\'")}', '${String(item.category || "Nightlife").replace(/'/g, "\\'")}')"
+            class="group cursor-pointer overflow-hidden rounded-2xl gold-border-glow bg-surface"
+          >
+            <div class="aspect-[4/3] w-full overflow-hidden bg-obsidian">
+              <img
+                src="${item.file}"
+                alt="${item.title || "Magnum Bar & Lounge photo"}"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='${fallback}';"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+            </div>
+            <figcaption class="flex items-center justify-between gap-2 p-3.5">
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">${item.category || "Nightlife"}</p>
+                <p class="mt-0.5 text-sm font-semibold text-stone-100">${item.title || "Magnum Bar & Lounge"}</p>
+              </div>
+              <span class="text-xs font-semibold text-goldLight">View &rarr;</span>
+            </figcaption>
+          </figure>
+        `;
+      }).join("");
+    }
+
+    function setGalleryCategory(cat) {
+      activeCategory = cat;
+      renderGallery();
+    }
+
+    let countdownInterval = null;
+    function startCountdown() {
+      if (countdownInterval) clearInterval(countdownInterval);
+      const targetIso = (activeConfig.featuredEvent && activeConfig.featuredEvent.dateISO) || "2026-12-25T20:00:00+03:00";
+      const targetTime = new Date(targetIso).getTime();
+
+      function tick() {
+        const diff = Math.max(0, targetTime - Date.now());
+        document.getElementById("cd-days").textContent = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, "0");
+        document.getElementById("cd-hours").textContent = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, "0");
+        document.getElementById("cd-minutes").textContent = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, "0");
+        document.getElementById("cd-seconds").textContent = String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
+      }
+
+      tick();
+      countdownInterval = setInterval(tick, 1000);
+    }
+
+    function openBookingModal(pkgName, price) {
+      const select = document.getElementById("packageSelect");
+      const val = `${pkgName}|${price}`;
+      const exists = Array.from(select.options).some(opt => opt.value === val);
+      if (!exists && pkgName) {
+        select.add(new Option(`${pkgName} — ${formatKES(price)}`, val));
+      }
+      if (pkgName) select.value = val;
+
+      const modal = document.getElementById("bookingModal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById("bookingModal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function openLightbox(src, title, category) {
+      const img = document.getElementById("lightboxImg");
+      img.onerror = function () {
+        this.onerror = null;
+        this.src = makeFallbackSvg(title);
+      };
+      img.src = src;
+      img.alt = title;
+      document.getElementById("lightboxTitle").textContent = title;
+      document.getElementById("lightboxCategory").textContent = category;
+
+      const modal = document.getElementById("lightboxModal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById("lightboxModal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function getLocationDetails() {
+      const loc = (activeConfig.venue && activeConfig.venue.location) || {};
+      const address = loc.text || "Naivas Hyper Mall - Kisii, along Kisii-Migori Road";
+      const query = encodeURIComponent(loc.mapQuery || address);
+      const embedUrl = `https://maps.google.com/maps?q=${query}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
+      const dirUrl = loc.directionsUrl || `https://www.google.com/maps/dir/?api=1&destination=${query}`;
+      return { address, embedUrl, dirUrl };
+    }
+
+    function copyVenueAddress() {
+      const { address } = getLocationDetails();
+      const label = document.getElementById("copyAddressLabel");
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(address).then(() => {
+          label.textContent = "Copied!";
+          setTimeout(() => { label.textContent = "Copy Address"; }, 1800);
+        });
+      }
+    }
+
+    function shareLiveLocation() {
+      const { address, dirUrl } = getLocationDetails();
+      if (navigator.share) {
+        navigator.share({
+          title: "Magnum Bar & Lounge - Live Location",
+          text: `Magnum Bar & Lounge (${address})`,
+          url: dirUrl,
+        }).catch(() => {});
+      } else {
+        window.open(dirUrl, "_blank", "noopener,noreferrer");
+      }
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const [pkgName, price] = document.getElementById("packageSelect").value.split("|");
+      const name = document.getElementById("guestName").value.trim();
+      const guests = document.getElementById("guestCount").value.trim();
+      const notes = document.getElementById("guestNotes").value.trim();
+      const eventDate = (activeConfig.featuredEvent && activeConfig.featuredEvent.displayDate) || "December 25, 2026";
+      const waNumber = (activeConfig.venue && activeConfig.venue.whatsappNumber) || "254116162159";
+      const { address } = getLocationDetails();
+
+      const lines = [
+        `Hello Magnum Bar & Lounge, I would like to book for *${eventDate}*:`,
+        `- *Package:* ${pkgName} (${formatKES(price)})`,
+        `- *Name:* ${name}`,
+        `- *Guests:* ${guests}`,
+        `- *Venue:* ${address}`,
+      ];
+      if (notes) lines.push(`- *Notes:* ${notes}`);
+
+      window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener,noreferrer");
+      closeBookingModal();
+    });
+
+    function applyConfigToUI() {
+      const v = activeConfig.venue || {};
+      const ev = activeConfig.featuredEvent || {};
+      const { address, embedUrl, dirUrl } = getLocationDetails();
+
+      document.getElementById("navVenueName").textContent = (v.name || "MAGNUM BAR & LOUNGE").toUpperCase();
+      document.getElementById("heroTitle").textContent = (v.name || "MAGNUM BAR & LOUNGE").toUpperCase();
+      document.getElementById("liveStatusText").textContent = `${ev.status || "LIVE BOOKINGS OPEN"} • ${ev.displayDate || "DECEMBER 25, 2026"}`;
+      document.getElementById("pkgPhoneSpan").textContent = v.displayPhone || "0116162159";
+      document.getElementById("footerPhone").textContent = v.displayPhone || "0116162159";
+      document.getElementById("modalPhoneText").textContent = v.displayPhone || "0116162159";
+      document.getElementById("locationAddressText").textContent = `We are located at ${address}.`;
+      document.getElementById("locationMapFrame").src = embedUrl;
+      document.getElementById("liveDirectionsLink").href = dirUrl;
+
+      renderPackages();
+      renderGallery();
+      startCountdown();
+    }
+
+    // Render immediately from embedded JSON so the page never stays blank
+    applyConfigToUI();
+
+    // Optionally pick up updates from ./data/magnum-config.json if present
+    (async function syncExternalJson() {
+      try {
+        const res = await fetch("./data/magnum-config.json", { cache: "no-store" });
+        if (res.ok) {
+          const json = await res.json();
+          activeConfig = {
+            ...activeConfig,
+            ...json,
+            venue: {
+              ...activeConfig.venue,
+              ...(json.venue || {}),
+              location: {
+                ...activeConfig.venue.location,
+                ...((json.venue && json.venue.location) || {}),
+              },
+            },
+            featuredEvent: { ...activeConfig.featuredEvent, ...(json.featuredEvent || {}) },
+            packages: Array.isArray(json.packages) && json.packages.length ? json.packages : activeConfig.packages,
+            gallery: Array.isArray(json.gallery) && json.gallery.length ? json.gallery : activeConfig.gallery,
+          };
+          applyConfigToUI();
+        }
+      } catch (_) {
+        // Embedded JSON already rendered
+      }
+    })();
+  </script>
+</body>
+</html>
