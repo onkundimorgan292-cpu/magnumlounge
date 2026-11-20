@@ -1,0 +1,101 @@
+{
+  "venue": {
+    "name": "Magnum Bar & Lounge",
+    "tagline": "Naivas Hyper Mall • Kisii",
+    "whatsappNumber": "254116162159",
+    "displayPhone": "0116162159",
+    "currency": "KES",
+    "location": {
+      "text": "Naivas Hyper Mall - Kisii, along Kisii-Migori Road",
+      "mapQuery": "Naivas Hyper Mall Kisii Kisii-Migori Road",
+      "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Naivas+Hyper+Mall+Kisii+Kisii-Migori+Road"
+    }
+  },
+  "featuredEvent": {
+    "title": "December 25th Mega Night",
+    "dateISO": "2026-12-25T20:00:00+03:00",
+    "displayDate": "December 25, 2026",
+    "status": "LIVE BOOKINGS OPEN",
+    "countdownEnabled": true
+  },
+  "packages": [
+    {
+      "id": "vvip",
+      "name": "VVIP Table",
+      "price": 50000,
+      "formattedPrice": "KES 50,000",
+      "badge": "Most Exclusive",
+      "perks": [
+        "Prime VVIP Booth Reservation (Up to 8 Guests)",
+        "2 Premium Bottles (Hennessy / Martell VSOP / Black Label)",
+        "Dedicated Host, Express Entry & Chasers"
+      ]
+    },
+    {
+      "id": "vip",
+      "name": "VIP Table",
+      "price": 45000,
+      "formattedPrice": "KES 45,000",
+      "badge": "VIP Experience",
+      "perks": [
+        "Reserved VIP Lounge Table (Up to 6 Guests)",
+        "2 Premium Bottles or Spirit Selection",
+        "Priority Service & Mixers Included"
+      ]
+    },
+    {
+      "id": "regular",
+      "name": "Regular Table",
+      "price": 5000,
+      "formattedPrice": "KES 5,000",
+      "badge": "Standard Table",
+      "perks": [
+        "Reserved Lounge Table & Entry Access",
+        "Drink / Bottle Credit Included",
+        "Full Access to Live DJ & Dancefloor"
+      ]
+    }
+  ],
+  "gallery": [
+    {
+      "file": "images/1795131555002.jpg",
+      "title": "Martell VSOP Bottle Service",
+      "category": "Bottle Service"
+    },
+    {
+      "file": "images/1795131580314.jpg",
+      "title": "Hennessy VIP Night",
+      "category": "Bottle Service"
+    },
+    {
+      "file": "images/1795131669289.jpg",
+      "title": "Live DJ on the Decks",
+      "category": "Entertainment"
+    },
+    {
+      "file": "images/1795131683931.jpg",
+      "title": "Magnum Lounge Crew & Bottles",
+      "category": "Guests"
+    },
+    {
+      "file": "images/1795131723949.jpg",
+      "title": "Toast & Lounge Vibes",
+      "category": "Atmosphere"
+    },
+    {
+      "file": "images/1795131746276.jpg",
+      "title": "Chilled Hennessy Ice Bucket",
+      "category": "VIP Service"
+    },
+    {
+      "file": "images/1795131824030.jpg",
+      "title": "Johnnie Walker & Hennessy Lineup",
+      "category": "Bottle Service"
+    },
+    {
+      "file": "images/1795131832787.jpg",
+      "title": "Magnum Nightlife Spotlight",
+      "category": "Guests"
+    }
+  ]
+}
