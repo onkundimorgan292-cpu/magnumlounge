@@ -1,22 +1,18 @@
 {
   "venue": {
     "name": "Magnum Bar & Lounge",
-    "tagline": "The Ultimate Luxury Lounge",
+    "tagline": "Naivas Hyper Mall • Kisii",
     "whatsappNumber": "254116162159",
     "displayPhone": "0116162159",
     "currency": "KES",
     "location": {
-      "text": "Naivas Hyper Mall- Kisii, along Kisii- Migori Road",
-      "googleMapsUrl": "https://maps.google.com/?q=Naivas+Hyper+Mall+Kisii"
-    },
-    "theme": {
-      "primaryColor": "#08080C",
-      "accentColor": "#D4AF37",
-      "liveBadgeColor": "#F5C542"
+      "text": "Naivas Hyper Mall - Kisii, along Kisii-Migori Road",
+      "mapQuery": "Naivas Hyper Mall Kisii Kisii-Migori Road",
+      "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Naivas+Hyper+Mall+Kisii+Kisii-Migori+Road"
     }
   },
   "featuredEvent": {
-    "title": "Grand Festive Christmas Night",
+    "title": "December 25th Mega Night",
     "dateISO": "2026-12-25T20:00:00+03:00",
     "displayDate": "December 25, 2026",
     "status": "LIVE BOOKINGS OPEN",
@@ -25,14 +21,14 @@
   "packages": [
     {
       "id": "vvip",
-      "name": "VVIP Reservation",
+      "name": "VVIP Table",
       "price": 50000,
       "formattedPrice": "KES 50,000",
-      "badge": "Elite",
+      "badge": "Most Exclusive",
       "perks": [
-        "Priority VIP Enclosure Entry (Up to 8 Guests)",
-        "2 Premium Selected Bottles (VSOP/Hennessy/Johnnie Walker)",
-        "Personal Host, Chasers, and Bitings"
+        "Prime VVIP Booth Reservation (Up to 8 Guests)",
+        "2 Premium Bottles (Hennessy / Martell VSOP / Black Label)",
+        "Dedicated Host, Express Entry & Chasers"
       ]
     },
     {
@@ -40,64 +36,65 @@
       "name": "VIP Table",
       "price": 45000,
       "formattedPrice": "KES 45,000",
-      "badge": "Signature",
+      "badge": "VIP Experience",
       "perks": [
-        "Reserved VIP Seat Booth (Up to 6 Guests)",
-        "Choice of 2 Spirits/Champagnes",
-        "Exclusive Guest Host and Complementary Mixers"
+        "Reserved VIP Lounge Table (Up to 6 Guests)",
+        "2 Premium Bottles or Spirit Selection",
+        "Priority Service & Mixers Included"
       ]
     },
     {
       "id": "regular",
-      "name": "Regular Table Reservation",
+      "name": "Regular Table",
       "price": 5000,
       "formattedPrice": "KES 5,000",
-      "badge": "General VIP",
+      "badge": "Standard Table",
       "perks": [
-        "Lounge Entry and Stand & Reserved Table (Up to 4 Guests)",
-        "Includes Bottle/Mixer Selection Base Tier"
+        "Reserved Lounge Table & Entry Access",
+        "Drink / Bottle Credit Included",
+        "Full Access to Live DJ & Dancefloor"
       ]
     }
   ],
   "gallery": [
     {
-      "file": "images/1795117552152.jpg",
-      "title": "Martell VSOP Bottle Feature",
-      "category": "Experience"
+      "file": "images/1795131555002.jpg",
+      "title": "Martell VSOP Bottle Service",
+      "category": "Bottle Service"
     },
     {
-      "file": "images/1795117562625.jpg",
-      "title": "VIP High Table Moments",
-      "category": "Atmosphere"
+      "file": "images/1795131580314.jpg",
+      "title": "Hennessy VIP Night",
+      "category": "Bottle Service"
     },
     {
-      "file": "images/1795117568349.jpg",
-      "title": "Magnum Live Beat Sets",
-      "category": "Nightlife"
+      "file": "images/1795131669289.jpg",
+      "title": "Live DJ on the Decks",
+      "category": "Entertainment"
     },
     {
-      "file": "images/1795117588983.jpg",
-      "title": "Signature Celebrations",
-      "category": "Experience"
-    },
-    {
-      "file": "images/1795117846002.jpg",
-      "title": "Pouring Good Times",
+      "file": "images/1795131683931.jpg",
+      "title": "Magnum Lounge Crew & Bottles",
       "category": "Guests"
     },
     {
-      "file": "images/1795117849745.jpg",
-      "title": "Ice bucket Premium Hennessy",
-      "category": "VVIP Select"
+      "file": "images/1795131723949.jpg",
+      "title": "Toast & Lounge Vibes",
+      "category": "Atmosphere"
     },
     {
-      "file": "images/1795117849746.jpg",
-      "title": "Signature Hennessy and Johnnie",
-      "category": "VVIP Select"
+      "file": "images/1795131746276.jpg",
+      "title": "Chilled Hennessy Ice Bucket",
+      "category": "VIP Service"
     },
     {
-      "file": "images/1795117849747.jpg",
-      "title": "Weekend Live Host Showcase",
+      "file": "images/1795131824030.jpg",
+      "title": "Johnnie Walker & Hennessy Lineup",
+      "category": "Bottle Service"
+    },
+    {
+      "file": "images/1795131832787.jpg",
+      "title": "Magnum Nightlife Spotlight",
       "category": "Guests"
     }
   ]
