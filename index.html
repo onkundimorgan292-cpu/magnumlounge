@@ -767,7 +767,7 @@
 
     function getLocationDetails() {
       const loc = (activeConfig.venue && activeConfig.venue.location) || {};
-      const address = loc.text || "Naivas Hyper Mall - Kisii, along Kisii-Migori Road";
+      const address = loc.text || "Naivas Hyper Mall - Kisii, along Kisii-Kisumu Highway Road";
       const query = encodeURIComponent(loc.mapQuery || address);
       const embedUrl = `https://maps.google.com/maps?q=${query}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
       const dirUrl = loc.directionsUrl || `https://www.google.com/maps/dir/?api=1&destination=${query}`;
